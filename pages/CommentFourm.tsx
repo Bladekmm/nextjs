@@ -8,10 +8,11 @@ import abi from "../src/abi.json";
 import { CONTRACT_ADDRESS } from "../src/config";
 import { ethers } from 'ethers';
 import exampleImage from "../images/logo.png";
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const contractAddress = CONTRACT_ADDRESS;
-const contractABI = abi; // Replace with your contract ABI
+const contractABI = abi;
 
 const CommentsPage: React.FC = () => {
     const [web3, setWeb3] = useState<Web3 | null>(null);
@@ -121,7 +122,7 @@ const CommentsPage: React.FC = () => {
     };
 
     const fetchTokenBalance = async () => {
-        // Add your web3 setup code here
+
         if (!web3) return;
 
         try {
@@ -157,6 +158,9 @@ const CommentsPage: React.FC = () => {
 
             <p>Your Token Balance: {tokenBalance !== null ? tokenBalance : 'Loading...'}</p>
             <button onClick={fetchTokenBalance}>Get Token Balance Now</button>
+            <Link href="/">
+                <a>Go back to Home</a>
+            </Link>
         </div>
     );
 };
