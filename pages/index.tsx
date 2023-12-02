@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import exampleImage from "../images/logo.png";
+import Image from 'next/image'
 
 function Home() {
     return (
         <ul>
-            <li>
-                <Link href="/">Home</Link>
-            </li>
+            <Image src={exampleImage} alt="LOGO" height={80} />
+            <h1>Home Page</h1>
             <li>
                 <Link href="/register">Register</Link>
             </li>
