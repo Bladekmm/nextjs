@@ -37,8 +37,8 @@ const CommentsPage: React.FC = () => {
         }
     };
 
-    const mintToken = async (orderId: number, comment: string) => {
-        if (!web3 || !orderId || !comment) {
+    const mintToken = async (comment: string) => {
+        if (!web3 || !comment) {
             alert('Please enter both Order ID and Comment');
             return;
         }
@@ -48,9 +48,10 @@ const CommentsPage: React.FC = () => {
         const connectedContract = contract.connect(signer);
 
         try {
-            await connectedContract.mintToken(comment, orderId);
+            await connectedContract.mintToken(comment);
             console.log('Comment posted successfully');
             displayComments();
+            window.alert("You have successfully post a comment! You can check your balance now!")
         } catch (error) {
             console.error(error);
         }
@@ -67,6 +68,7 @@ const CommentsPage: React.FC = () => {
         try {
             await connectedContract.likeComment(commentToLike);
             console.log('Comment liked successfully');
+            window.alert("You have successfully liked a comment!")
             displayComments();
         } catch (error) {
             console.error(error);
@@ -84,6 +86,7 @@ const CommentsPage: React.FC = () => {
         try {
             await connectedContract.dislikeComment(commentToDislike);
             console.log('Comment disliked successfully');
+            window.alert("You have successfully disliked a comment! One token is deducted from your account")
             displayComments();
         } catch (error) {
             console.error(error);
@@ -149,12 +152,14 @@ const CommentsPage: React.FC = () => {
 
             <div>
                 <CommentForm onSubmit={mintToken} />
-                <button onClick={handleFetchComments}>Fetch Existing Comments</button>
+                <button onClick={handleFetchComments}>Get Existing Comments</button>
             </div>
+
             <p>Your Token Balance: {tokenBalance !== null ? tokenBalance : 'Loading...'}</p>
-            <button onClick={fetchTokenBalance}>Fetch Token Balance</button>
+            <button onClick={fetchTokenBalance}>Get Token Balance Now</button>
         </div>
     );
 };
 
 export default CommentsPage;
+
