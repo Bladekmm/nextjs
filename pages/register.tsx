@@ -5,6 +5,7 @@ import { ethers } from "ethers";
 import { CONTRACT_ADDRESS } from "../src/config";
 import exampleImage from "../images/logo.png";
 import Image from 'next/image'
+import Link from 'next/link';
 
 declare global {
     interface Window {
@@ -77,6 +78,13 @@ const Register: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             <button onClick={register}>Register</button>
+
+             <Link href="/CommentFourm">
+                <a>Go to CommentFourm</a>
+            </Link>
+            <Link href="/">
+                <a>Go back to Home</a>
+            </Link>
         </div>
     );
 };
