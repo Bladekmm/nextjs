@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
-import CommentList from 'C:/Users/km/Desktop/omoov/component/Commentlist';
-import CommentForm from 'C:/Users/km/Desktop/omoov/component/CommentForm';
-import abi from "C:/Users/km/Desktop/omoov/src/abi.json";
-import { CONTRACT_ADDRESS } from "C:/Users/km/Desktop/omoov/src/config";
+import CommentList from '../component/Commentlist';
+import CommentForm from '../component/CommentForm';
+import abi from "../src/abi.json";
+import { CONTRACT_ADDRESS } from "../src/config";
 import { ethers } from 'ethers';
-import exampleImage from "C:/Users/km/Desktop/omoov/images/logo.png";
+import exampleImage from "../images/logo.png";
 import Image from 'next/image'
 
 const contractAddress = CONTRACT_ADDRESS;
