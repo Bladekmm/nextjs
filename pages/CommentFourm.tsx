@@ -155,12 +155,17 @@ const CommentsPage: React.FC = () => {
                 <CommentForm onSubmit={mintToken} />
                 <button onClick={handleFetchComments}>Get Existing Comments</button>
             </div>
-
+            <div>
             <p>Your Token Balance: {tokenBalance !== null ? tokenBalance : 'Loading...'}</p>
+            </div>
+            <div>
             <button onClick={fetchTokenBalance}>Get Token Balance Now</button>
+            </div>
+            <div>
             <Link href="/">
                 <a>Go back to Home</a>
             </Link>
+            </div>
         </div>
     );
 };
