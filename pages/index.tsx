@@ -11,7 +11,10 @@ function Home() {
                 <Link href="/register">Register</Link>
             </li>
             <li>
-                <Link href="/CommentFourm">CommentFourm</Link>
+                <Link href="/CommentFourm">Comment Fourm</Link>
+            </li>
+            <li>
+                <Link href="/PersonalPage">Personal Page</Link>
             </li>
         </ul>
     )
