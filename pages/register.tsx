@@ -47,10 +47,13 @@ const Register: React.FC = () => {
                 // Call the user registration function with a name parameter
                 
                 await connectedContract.registerUser(name);
+                console.log("User register successfully!");
             } else {
                 // Call the merchant registration function with a name parameter
                 await connectedContract.registerMerchant(name);
+                console.log("Merchant register successfully!");
             }
+             window.alert("Registration Complete!");
         } catch (error) {
             console.error('Error during registration:', error);
         }
