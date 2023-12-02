@@ -1,9 +1,9 @@
 ﻿import React, { useState,useEffect } from 'react';
 import Web3 from 'web3';
-import abi from "C:/Users/km/Desktop/omoov/src/abi.json";
+import abi from "../src/abi.json";
 import { ethers } from "ethers";
-import { CONTRACT_ADDRESS } from "C:/Users/km/Desktop/omoov/src/config";
-import exampleImage from "C:/Users/km/Desktop/omoov/images/logo.png";
+import { CONTRACT_ADDRESS } from "../src/config";
+import exampleImage from "../images/logo.png";
 import Image from 'next/image'
 
 declare global {
