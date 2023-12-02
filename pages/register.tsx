@@ -78,13 +78,16 @@ const Register: React.FC = () => {
                 onChange={(e) => setName(e.target.value)}
             />
             <button onClick={register}>Register</button>
-
-             <Link href="/CommentFourm">
+            <div>
+            <Link href="/CommentFourm">
                 <a>Go to CommentFourm</a>
             </Link>
+            </div>
+            <div>
             <Link href="/">
                 <a>Go back to Home</a>
             </Link>
+            </div>
         </div>
     );
 };
