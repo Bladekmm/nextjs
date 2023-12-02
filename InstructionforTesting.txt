@@ -1,0 +1,41 @@
+Register Page
+Open the application in a web browser.
+Navigate to the "Register" page.
+Choose the registration type (User or Merchant) from the dropdown.
+Enter a name in the input field.
+Click the "Register" button.
+Expected Result:
+
+If the registration is successful, you should see a pop-up or console log message indicating "Registration Successful!"
+
+2. Comment Page
+(1)Posting comments
+Navigate to the "CommentFourm" page.
+
+Find the input field  for adding a comment.
+Enter a comment in the input field.
+Submit the comment.
+Expected Result:
+
+The comment should be submitted successfully.
+The comment should appear on the page in a few seconds.
+When clicking the "Get Token Balance" Button, the "Loading" should be changed to 1
+
+(2)Like Comments
+Only registered users can like comments.
+One person can't like their own comments,so you can use another wallet account to test this function
+Click the "Like" Button and you should see a pop-up showing "You have successfully liked a comment!".
+
+(3)Dislike Comments
+Only registered users can dislike comments.
+Click the "Dislike" Button and you should see a pop-up showing "You have successfully disliked a comment! One token is deducted from your account".
+When clicking the "Get Token Balance" Button, the number should go down by 1.
+
+3. Personal Page
+Navigate to the "PersonalPage".
+Explore the personal information section.
+Interact with any features available on the personal page, such as get token balance, get total likes, etc.
+Expected Result:
+
+The personal page should display the user or merchant's information correctly.
+Any interactions with features on the personal page should be reflected accurately.
