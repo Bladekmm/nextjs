@@ -23,3 +23,4 @@ const CommentList: React.FC<CommentListProps> = ({ comments, onLike, onDislike }
 };
 
 export default CommentList;
+
