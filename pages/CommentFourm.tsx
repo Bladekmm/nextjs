@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Web3 from 'web3';
-import CommentList from '../component/Commentlist';
-import CommentForm from '../component/CommentForm';
+import CommentList from "../component/Commentlist";
+import CommentForm from "../component/CommentForm";
 import abi from "../src/abi.json";
 import { CONTRACT_ADDRESS } from "../src/config";
 import { ethers } from 'ethers';
