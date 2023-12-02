@@ -4,7 +4,8 @@ import abi from "../src/abi.json";
 import { CONTRACT_ADDRESS } from "../src/config";
 import { ethers } from 'ethers';
 import exampleImage from "../images/logo.png";
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 const contractAddress = CONTRACT_ADDRESS;
 const contractABI = abi; // Replace with your contract ABI
@@ -177,10 +178,21 @@ const PersonalInfoPage: React.FC = () => {
                     onChange={(e) => setCouponAmountInput(Number(e.target.value))}
                 />
             </label>
+            <div>            
             <button onClick={handleExchangeCoupon}>Exchange Coupon</button>
+            </div>
+            <div>
             <button onClick={handleGetTokenBalance}>Get Token Balance</button>
+            </div>
+            <div>
             <button onClick={handleGetTotalLikes}>Get Total Likes</button>
+            </div>
+            <div>
             <button onClick={handleGetCouponRate}>Get Coupon Rate</button>
+            </div>
+            <div>
+            <Link href="/">Go back to Home</Link>
+            </div>
         </div>
     );
 };
